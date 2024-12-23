@@ -36,6 +36,7 @@
         <div id="menu" class="hidden md:flex items-center gap-6">
             <a href="/" class="font-medium text-gray-600 hover:text-primary transition">Home</a>
             <a href="#about" class="font-medium text-gray-600 hover:text-primary transition">About</a>
+            <a href="#courses" class="font-medium text-gray-600 hover:text-primary transition">Courses</a>
             <a href="#services" class="font-medium text-gray-600 hover:text-primary transition">Services</a>
             <a href="#contact" class="font-medium text-gray-600 hover:text-primary transition">Contact</a>
         </div>
@@ -52,7 +53,7 @@
     </nav>
 
     <!-- Mobile Navigation Dialog -->
-    <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 z-20">
+    <div id="nav-dialog" class="hidden fixed md:hidden bg-white inset-0 z-20">
         <!-- Header in Dialog -->
         <div class="p-3 flex justify-between items-center h-16 shadow-sm">
             <a href="#" id="brand" class="flex items-center gap-2">
@@ -68,6 +69,7 @@
         <div class="flex flex-col items-center gap-6 mt-6">
             <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">Home</a>
             <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">About</a>
+            <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">Courses</a>
             <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">Services</a>
             <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">Contact</a>
             <button
@@ -148,6 +150,79 @@
             </div>
         </div>
     </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="bg-white py-16">
+        <div class="container mx-auto px-6 lg:px-20">
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Our Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Frontend Development -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Frontend Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Learn to create stunning and responsive user interfaces using modern frontend technologies like
+                        HTML, CSS, JavaScript, and frameworks like React.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>HTML & CSS Basics</li>
+                        <li>JavaScript Fundamentals</li>
+                        <li>React & Vue Frameworks</li>
+                    </ul>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-2xl font-bold text-gray-800">$199</span>
+                        <span class="text-sm text-green-600">Limited Time Offer</span>
+                    </div>
+                    <a href="#"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                        Buy Now
+                    </a>
+                </div>
+                <!-- Backend Development -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">Backend Development</h3>
+                    <p class="text-gray-600 mb-6">
+                        Dive into server-side programming and databases. Learn to build powerful and scalable backends
+                        using Node.js, Python, and databases like MongoDB and MySQL.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Node.js & Express</li>
+                        <li>Python Django/Flask</li>
+                        <li>Database Management</li>
+                    </ul>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-2xl font-bold text-gray-800">$249</span>
+                        <span class="text-sm text-green-600">Save 20%</span>
+                    </div>
+                    <a href="#"
+                        class="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300">
+                        Buy Now
+                    </a>
+                </div>
+                <!-- Random Courses -->
+                <div class="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-2xl font-bold text-purple-600 mb-4">Random Courses</h3>
+                    <p class="text-gray-600 mb-6">
+                        Explore a variety of courses that include DevOps, AI/ML, cybersecurity, and more. These courses
+                        are designed to expand your skill set and career prospects.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>AI & Machine Learning</li>
+                        <li>DevOps Tools</li>
+                        <li>Cybersecurity Basics</li>
+                    </ul>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-2xl font-bold text-gray-800">$299</span>
+                        <span class="text-sm text-green-600">Early Bird Offer</span>
+                    </div>
+                    <a href="#"
+                        class="bg-purple-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 transition duration-300">
+                        Buy Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- Testimonial Section -->
