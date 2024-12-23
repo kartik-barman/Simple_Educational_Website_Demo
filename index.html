@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #nav-dialog {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        #nav-dialog.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        #nav-dialog.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="font-mono bg-gray-100">
+    <!-- Navigation -->
+    <nav class="p-3 flex justify-between items-center h-16 bg-white shadow-sm fixed top-0 left-0 w-full z-10">
+        <a href="#" id="brand" class="flex items-center gap-2">
+            <img src="https://res.cloudinary.com/dewwngmuf/image/upload/v1731011492/user_profile_picture/nuqx025rmbhebdpcnyft.jpg"
+                alt="logo" class="object-cover max-w-12 max-h-12 rounded-full">
+            <span class="text-lg font-semibold">RK ACADEMY</span>
+        </a>
+        <!-- Desktop Menu -->
+        <div id="menu" class="hidden md:flex items-center gap-6">
+            <a href="/" class="font-medium text-gray-600 hover:text-primary transition">Home</a>
+            <a href="#about" class="font-medium text-gray-600 hover:text-primary transition">About</a>
+            <a href="#services" class="font-medium text-gray-600 hover:text-primary transition">Services</a>
+            <a href="#contact" class="font-medium text-gray-600 hover:text-primary transition">Contact</a>
+        </div>
+        <!-- Desktop Button -->
+        <button
+            class="hidden md:flex items-center gap-2 border border-gray-600 rounded-lg px-6 py-2 hover:bg-gray-100 transition">
+            <a href="#" class="text-gray-600">Login</a>
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+        <!-- Mobile Menu Button -->
+        <button class="p-2 text-gray-600 md:hidden" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation Dialog -->
+    <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 z-20">
+        <!-- Header in Dialog -->
+        <div class="p-3 flex justify-between items-center h-16 shadow-sm">
+            <a href="#" id="brand" class="flex items-center gap-2">
+                <img src="https://res.cloudinary.com/dewwngmuf/image/upload/v1731011492/user_profile_picture/nuqx025rmbhebdpcnyft.jpg"
+                    alt="logo" class="object-cover max-w-12 max-h-12 rounded-full">
+                <span class="text-lg font-semibold">RK ACADEMY</span>
+            </a>
+            <button class="p-2 text-gray-600 md:hidden" onclick="toggleMenu()">
+                <i class="fa-solid fa-xmark text-gray-600"></i>
+            </button>
+        </div>
+        <!-- Menu Links -->
+        <div class="flex flex-col items-center gap-6 mt-6">
+            <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">Home</a>
+            <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">About</a>
+            <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">Services</a>
+            <a href="#" class="text-lg font-medium text-gray-600 hover:text-primary transition">Contact</a>
+            <button
+                class="flex items-center gap-2 border border-gray-600 rounded-lg px-6 py-2 hover:bg-gray-100 transition">
+                <a href="#" class="text-gray-600">Login</a>
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gray-100">
+            <div class="container mx-auto px-6 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-10 py-20">
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-800 leading-tight">
+                        Welcome to <span class="text-blue-600">RK Academy</span>
+                    </h1>
+                    <p class="mt-6 text-gray-600 text-lg">
+                        Transform your learning experience with expert guidance, engaging courses, and a community of
+                        passionate learners.
+                    </p>
+                    <div class="mt-8 flex justify-center lg:justify-start gap-4">
+                        <a href="#services"
+                            class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition">
+                            Get Started
+                        </a>
+                        <a href="#about"
+                            class="px-6 py-3 border border-gray-400 text-gray-800 rounded-lg hover:bg-gray-200 transition">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <!-- Image Content -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://res.cloudinary.com/dewwngmuf/image/upload/v1731011492/user_profile_picture/nuqx025rmbhebdpcnyft.jpg"
+                        alt="Hero Image" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+            </div>
+
+            <!-- Decorative Background -->
+            <div class="absolute inset-0 bg-blue-50 w-full h-full z-[-1]" style="clip-path: circle(70% at center);">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Image Section -->
+                <div>
+                    <img src="https://res.cloudinary.com/dewwngmuf/image/upload/v1731011492/user_profile_picture/nuqx025rmbhebdpcnyft.jpg"
+                        alt="About Us" class="rounded-lg shadow-md">
+                </div>
+                <!-- Content Section -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">About Us</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Welcome to RK Academy, where knowledge meets excellence. We are committed to providing
+                        world-class education that empowers learners to reach their full potential. With experienced
+                        instructors and a supportive community, we ensure a transformative learning experience for all
+                        our students.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our mission is to create opportunities for learners everywhere by delivering accessible,
+                        high-quality, and innovative educational solutions. Join us to embark on a journey of growth and
+                        success.
+                    </p>
+                    <a href="#contact"
+                        class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonial Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 lg:px-20 text-center">
+            <!-- Section Title -->
+            <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 mb-10">
+                What Our Students Say
+            </h2>
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Testimonial 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://via.placeholder.com/50" alt="User 1"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">Dipayan Dey</h3>
+                            <p class="text-gray-500 text-sm">Software Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        “RK Academy transformed my career. The courses are detailed, easy to follow, and the instructors
+                        are amazing.”
+                    </p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://via.placeholder.com/50" alt="User 2"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">Haranath Das</h3>
+                            <p class="text-gray-500 text-sm">Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        “The mentorship program at RK Academy gave me the confidence to start my own business. Highly
+                        recommended!”
+                    </p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://via.placeholder.com/50" alt="User 3"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-800">Arijit Mondol</h3>
+                            <p class="text-gray-500 text-sm">Machine Learning Specialist</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        “RK Academy’s courses are a game-changer. The real-world projects helped me land my dream job.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6 lg:px-20 text-center">
+            <!-- Section Title -->
+            <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 mb-10">
+                Our Services
+            </h2>
+            <p class="text-gray-600 text-lg mb-16">
+                Discover a range of services tailored to meet your learning needs and career goals.
+            </p>
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Service 1 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-8">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Personalized Coaching</h3>
+                    <p class="text-gray-600">
+                        One-on-one coaching to help you achieve your personal and professional goals.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-8">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Expert-Led Courses</h3>
+                    <p class="text-gray-600">
+                        Comprehensive courses designed by industry experts to boost your skills.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-8">
+                    <div class="text-yellow-500 text-4xl mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Hands-On Projects</h3>
+                    <p class="text-gray-600">
+                        Real-world projects to help you build a strong portfolio and gain practical experience.
+                    </p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-8">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Community Support</h3>
+                    <p class="text-gray-600">
+                        Join a vibrant community of learners to share knowledge and grow together.
+                    </p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-8">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Career Guidance</h3>
+                    <p class="text-gray-600">
+                        Professional career advice and resources to help you succeed in your chosen field.
+                    </p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-8">
+                    <div class="text-teal-600 text-4xl mb-4">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Learning Resources</h3>
+                    <p class="text-gray-600">
+                        Access a wide range of books, guides, and tutorials to enhance your learning experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 lg:px-20">
+            <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 text-center mb-10">
+                Get in Touch
+            </h2>
+            <p class="text-center text-gray-600 text-lg mb-16">
+                We’d love to hear from you! Reach out to us for any inquiries or assistance.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <form action="#" method="POST" class="bg-white shadow-lg rounded-lg p-8">
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full p-3 border rounded-lg focus:ring-primary focus:border-primary"
+                            placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full p-3 border rounded-lg focus:ring-primary focus:border-primary"
+                            placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full p-3 border rounded-lg focus:ring-primary focus:border-primary"
+                            placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+                        Send Message
+                    </button>
+                </form>
+                <!-- Contact Details -->
+                <div class="bg-white shadow-lg rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope text-blue-600 text-xl mr-4"></i>
+                            <span class="text-gray-600">info@rkacademy.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone text-green-600 text-xl mr-4"></i>
+                            <span class="text-gray-600">+1 234 567 890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-location-dot text-red-500 text-xl mr-4"></i>
+                            <span class="text-gray-600">123 RK Street, Learning City</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-700">
+                                <i class="fa-brands fa-facebook-square text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-blue-500">
+                                <i class="fa-brands fa-twitter-square text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-pink-600 hover:text-pink-700">
+                                <i class="fa-brands fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-blue-700 hover:text-blue-800">
+                                <i class="fa-brands fa-linkedin text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Brand Section -->
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-4">RK ACADEMY</h2>
+                    <p class="text-gray-400">
+                        Empowering learners worldwide with quality education. Contact us for more information.
+                    </p>
+                </div>
+                <!-- Navigation Links -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                        <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact & Social Media -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Contact</h3>
+                    <ul class="space-y-3">
+                        <li><i class="fa-solid fa-envelope mr-2 text-blue-400"></i> info@rkacademy.com</li>
+                        <li><i class="fa-solid fa-phone mr-2 text-green-400"></i> +1 234 567 890</li>
+                        <li><i class="fa-solid fa-location-dot mr-2 text-red-400"></i> 123 RK Street, Learning City</li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold text-white mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="" class="text-gray-400 hover:text-blue-500">
+                                <i class="fa-brands fa-facebook-square text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-400">
+                                <i class="fa-brands fa-twitter-square text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-pink-500">
+                                <i class="fa-brands fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-600">
+                                <i class="fa-brands fa-linkedin text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center border-t border-gray-700 pt-6">
+                <p class="text-gray-400 text-sm">
+                    © 2024 RK ACADEMY. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            const navDialog = document.getElementById('nav-dialog');
+            navDialog.classList.toggle('hidden');
+            navDialog.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
